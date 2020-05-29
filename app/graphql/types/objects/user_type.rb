@@ -4,6 +4,7 @@ module Types
       field :name, String, null: false
       field :email, String, null: false
       field :uuid, String, null: false
+      field :handle, String, null: false
     end
   end
 end

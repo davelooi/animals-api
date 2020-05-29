@@ -1,6 +1,6 @@
 Given("there are some users") do
-  User.create!(name: 'Bruce Wayne', email: 'bruce@wayne.com', uuid: '1fb2dc13-8082-42d5-a33c-90a0cb1b662c')
-  User.create!(name: 'Clark Kent', email: 'clark@kent.com', uuid: 'cd8b4fb2-f958-472f-9bc5-cda1487696eb')
+  User.create!(name: 'Bruce Wayne', email: 'bruce@wayne.com', handle: 'batman')
+  User.create!(name: 'Clark Kent', email: 'clark@kent.com', handle: 'superman')
 end
 
 When("I make the graphql query:") do |string|
