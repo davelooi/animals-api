@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :tweets
+
   before_save :ensure_uuid
 
   private
