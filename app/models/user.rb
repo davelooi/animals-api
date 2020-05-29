@@ -1,7 +1,9 @@
 class User < ApplicationRecord
   has_many :tweets
 
-  before_save :ensure_uuid
+  validates :email, :uuid, :handle, presence: true, uniqueness: { case_sensitive: false }
+
+  before_validation :ensure_uuid
 
   private
 

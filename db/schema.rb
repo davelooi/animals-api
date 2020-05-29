@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_143121) do
+ActiveRecord::Schema.define(version: 2020_05_29_145719) do
 
   create_table "tweets", force: :cascade do |t|
     t.text "text"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 2020_05_29_143121) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "handle"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["handle"], name: "index_users_on_handle", unique: true
+    t.index ["uuid"], name: "index_users_on_uuid", unique: true
   end
 
   add_foreign_key "tweets", "users"
