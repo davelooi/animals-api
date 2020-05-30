@@ -14,7 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      name: 'Check out repo'
+    - name: Install sqlite3
+      run: sudo apt-get install sqlite3
     - uses: actions/setup-ruby@v1
+      name: 'Setup ruby'
       with:
         ruby-version: 2.7.1
     - name: Install dependencies
